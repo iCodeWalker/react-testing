@@ -69,3 +69,11 @@ describe("Greet", () => {
 
 // --> To replicate test.only we can use "fit" == focuses on a particular test
 // --> To replicate test.skip we can use "xit" == skips or excludes a particular test
+
+// --> Code Coverage
+
+// Code Coverage is a metric that helps to understand how much the software is tested.
+// 1. Statement Coverage
+// 2. Branch Coverage
+// 3. Code Coverage
+// 4. Function Coverage
