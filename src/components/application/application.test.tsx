@@ -18,6 +18,11 @@ describe("Application", () => {
     const inputElement = screen.getByRole("textbox", { name: "Name" });
     expect(inputElement).toBeInTheDocument();
 
+    const inputElement2 = screen.getByLabelText("Name", {
+      selector: "input", // takes the type of element when encounters more than one with same label
+    });
+    expect(inputElement2).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", { name: "Bio" });
     expect(bioElement).toBeInTheDocument();
 
@@ -26,6 +31,11 @@ describe("Application", () => {
 
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
+
+    const termsElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
+    expect(termsElement2).toBeInTheDocument();
 
     const submitBtnElement = screen.getByRole("button");
     expect(submitBtnElement).toBeInTheDocument();
