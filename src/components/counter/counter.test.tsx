@@ -101,4 +101,35 @@ describe("Counter", () => {
     await userEvent.tab();
     expect(setButton).toHaveFocus();
   });
+
+  // ---------------- POINTER EVENTS ----------------
+
+  // Convenience API's
+  // 1. click()
+  // 2. dblClick()
+  // 3. tripleClick()
+  // 3. hover()
+  // 4. unhover()
+
+  // Pointer API's
+  // pointer({keys: "[MouseLeft"})
+
+  // ---------------- KEYBOARD EVENTS ----------------
+
+  // Utility API's
+  // 1. type()
+  // 2. selectOptions()
+  // 3. deSelectOptions()
+  // 4. upload()
+
+  // Clipboard API's
+  // 1. copy()
+  // 2. cut()
+  // 3. paste()
+
+  // Convenience API's
+  // 1. tab()
+
+  // Keyboard API's
+  // keyboard("foo") // anything that we type.
 });
