@@ -1,6 +1,6 @@
 // Query multiple elements
 
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 import { Skills } from "./skills";
 
 // Find Multiple elements in the dom
@@ -65,7 +65,9 @@ describe("Skills", () => {
   // For example, data that is fetched from a server will be rendered only after a few milliseconds.
 
   test("start learning button is eventually displayed", async () => {
-    render(<Skills skills={skills} />);
+    const view = render(<Skills skills={skills} />);
+    logRoles(view.container);
+
     // const startlearningButton = screen.getByRole('button', {
     //     name: "Start learning"
     // });
@@ -82,6 +84,8 @@ describe("Skills", () => {
     // 1. Returns a promise which resolves to an array of elements when any elements are found
     // which matches the given query
 
+    // screen.debug();
+
     const startlearningButton = await screen.findByRole(
       "button",
       {
@@ -92,6 +96,16 @@ describe("Skills", () => {
       //   }
     );
 
+    // screen.debug();
+
     expect(startlearningButton).toBeInTheDocument();
   });
 });
+
+// user-event library
+
+// A companion library for testing library that simulates user interaction by dispatching the events
+// that would happen if the interaction took place in a browser.
+
+// alternate is fireEvent
+// fireMethod is a method from RTL which is used to dispatch DOM events.
