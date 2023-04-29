@@ -8,7 +8,8 @@ export const Skills = (props: SkillsProps) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoggedIn(true);
-    }, 1001);
+      // }, 1001); will not work as defalut wait time for findByRole is 1000ms
+    }, 500);
   }, []);
   return (
     <>
