@@ -43,7 +43,7 @@ describe("Skills", () => {
 
     // So for this use case we use queryBy
     const startlearningButton = screen.queryByRole("buttton", {
-      name: "Start Learning",
+      name: "Start learning",
     });
 
     // queryBy:
@@ -67,7 +67,7 @@ describe("Skills", () => {
   test("start learning button is eventually displayed", async () => {
     render(<Skills skills={skills} />);
     // const startlearningButton = screen.getByRole('button', {
-    //     name: "Start Learning"
+    //     name: "Start learning"
     // });
     // getByRole does not wait for the element to appear on the screen
 
@@ -85,11 +85,11 @@ describe("Skills", () => {
     const startlearningButton = await screen.findByRole(
       "button",
       {
-        name: "Start Learning",
-      },
-      {
-        timeout: 2000, // can add timeout
+        name: "Start learning",
       }
+      //   {
+      //     timeout: 2000, // can add timeout
+      //   }
     );
 
     expect(startlearningButton).toBeInTheDocument();
