@@ -1,38 +1,38 @@
 // Query multiple elements
 
-import { logRoles, render, screen } from "@testing-library/react";
-import { Skills } from "./skills";
+import { logRoles, render, screen } from '@testing-library/react';
+import { Skills } from './skills';
 
 // Find Multiple elements in the dom
 // getAllBy --> returns an array of all matching nodes for a query,
 // and throws an error if no elements matches
 
-describe("Skills", () => {
-  const skills = ["HTML", "CSS", "JavaScript"];
+describe('Skills', () => {
+  const skills = ['HTML', 'CSS', 'JavaScript'];
 
-  test("renders correctly", () => {
+  test('renders correctly', () => {
     render(<Skills skills={skills} />);
-    const listElement = screen.getByRole("list");
+    const listElement = screen.getByRole('list');
     expect(listElement).toBeInTheDocument();
   });
 
-  test("render list of screens", () => {
+  test('render list of screens', () => {
     render(<Skills skills={skills} />);
-    const listItemElements = screen.getAllByRole("listitem");
+    const listItemElements = screen.getAllByRole('listitem');
     expect(listItemElements).toHaveLength(skills.length);
   });
 
-  test("render login button", () => {
+  test('render login button', () => {
     render(<Skills skills={skills} />);
-    const loginButton = screen.getByRole("button", {
-      name: "Login",
+    const loginButton = screen.getByRole('button', {
+      name: 'Login',
     });
     expect(loginButton).toBeInTheDocument();
   });
 
   // to ensure that start learning(or an element) is not rendered(or not present) in the DOM.
 
-  test("start learning button not rendered", () => {
+  test('start learning button not rendered', () => {
     render(<Skills skills={skills} />);
 
     // const startlearningButton = screen.getByRole("buttton", {
@@ -42,8 +42,8 @@ describe("Skills", () => {
     // getRoleBy gives an error if the element is not present.
 
     // So for this use case we use queryBy
-    const startlearningButton = screen.queryByRole("buttton", {
-      name: "Start learning",
+    const startlearningButton = screen.queryByRole('buttton', {
+      name: 'Start learning',
     });
 
     // queryBy:
@@ -64,7 +64,7 @@ describe("Skills", () => {
 
   // For example, data that is fetched from a server will be rendered only after a few milliseconds.
 
-  test("start learning button is eventually displayed", async () => {
+  test('start learning button is eventually displayed', async () => {
     const view = render(<Skills skills={skills} />);
     logRoles(view.container);
 
@@ -87,9 +87,9 @@ describe("Skills", () => {
     // screen.debug();
 
     const startlearningButton = await screen.findByRole(
-      "button",
+      'button',
       {
-        name: "Start learning",
+        name: 'Start learning',
       }
       //   {
       //     timeout: 2000, // can add timeout

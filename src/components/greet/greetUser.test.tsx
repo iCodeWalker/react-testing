@@ -1,8 +1,8 @@
 // Greet should render the text hello and if a name is passed into the component,
 // It should render hello followed by the name
 
-import { render, screen } from "@testing-library/react";
-import GreetUser from "./greetUser";
+import { render, screen } from '@testing-library/react';
+import GreetUser from './greetUser';
 
 // test("Greet renders correctly", () => {
 //   render(<GreetUser />);
@@ -32,17 +32,17 @@ import GreetUser from "./greetUser";
 // 3 .decribe can be nested.
 // 4. can add multiple describe blocks inside a single file
 
-describe("Greet", () => {
-  test("renders correctly", () => {
+describe('Greet', () => {
+  test('renders correctly', () => {
     render(<GreetUser />);
-    const textElement = screen.getByText("Hello");
+    const textElement = screen.getByText('Hello');
     expect(textElement).toBeInTheDocument();
   });
 
-  test("render with name", () => {
+  test('render with name', () => {
     render(<GreetUser name="Vaibhav" />);
 
-    const textElement = screen.getByText("Hello Vaibhav");
+    const textElement = screen.getByText('Hello Vaibhav');
     expect(textElement).toBeInTheDocument();
   });
 

@@ -1,5 +1,5 @@
-import React from "react";
-import { GreetProps } from "./greetUser.types";
+import React from 'react';
+import { GreetProps } from './greetUser.types';
 
 const GreetUser = (props: GreetProps) => {
   return (

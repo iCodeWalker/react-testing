@@ -1,8 +1,8 @@
-import "./App.css";
-import { Application } from "./components/application/application";
-import { MuiMode } from "./components/mui/muiMode";
-import HomePage from "./pages/homePage";
-import { AppProviders } from "./providers/appProvider";
+import './App.css';
+import { Application } from './components/application/application';
+import { MuiMode } from './components/mui/muiMode';
+import HomePage from './pages/homePage';
+import { AppProviders } from './providers/appProvider';
 
 function App() {
   return (
