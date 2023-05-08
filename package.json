@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
-    "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
+    "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "plugins": [
@@ -65,6 +66,7 @@
     "eslint-plugin-jest-dom": "^4.0.3",
     "msw": "^1.2.1",
     "prettier": "^2.8.8",
-    "eslint-config-prettier": "^8.8.0"
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0"
   }
 }
